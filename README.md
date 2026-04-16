@@ -15,6 +15,18 @@ https://docs.google.com/drawings/d/1DXblBBuUiLAm_IhuKVVHFLm77iD_1kcDLqdRKewiVvY/
 
 
 ## W2
-Write your W2 Devlog here.
+Week 2 has no dev log notes needed. 
 
-Continue adding additional headers below this one for future weeks and future activities.
+## W3 
+
+### Activity 1 
+Edited breakdown based off feedback received.
+https://docs.google.com/drawings/d/1DXblBBuUiLAm_IhuKVVHFLm77iD_1kcDLqdRKewiVvY/edit?usp=sharing
+
+
+### Activity 2 
+1. By having it saved as a scene variable its more centralized instead of me needing to add it on each graph. 
+Also if I changed the name or something, I would only need to update it once, instead of it shattering every other place I might have included it. 
+2. The debug log actually did help on my transition node because I didn't actually the scene variable set up properly. 
+3. Yes, locking the cursor is actually super important to my vertical slice because the mouse is going to control which direction you're facing, so keeping it on screen is crucial to quality of life for gameplay.
+4. Yes, I think game states are relevant to my slice because I would like to have a sort of menu before the game starts, something basic- quite literally just a start button. And post game should be another state that shows scores achieved before dying or time running out. 
