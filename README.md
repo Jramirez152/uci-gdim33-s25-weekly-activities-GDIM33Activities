@@ -30,3 +30,23 @@ Also if I changed the name or something, I would only need to update it once, in
 2. The debug log actually did help on my transition node because I didn't actually the scene variable set up properly. 
 3. Yes, locking the cursor is actually super important to my vertical slice because the mouse is going to control which direction you're facing, so keeping it on screen is crucial to quality of life for gameplay.
 4. Yes, I think game states are relevant to my slice because I would like to have a sort of menu before the game starts, something basic- quite literally just a start button. And post game should be another state that shows scores achieved before dying or time running out. 
+
+
+## W4
+
+### Activity 1
+
+What is playable in my playtest currently? 
+
+I have the extremely basic gameplay loop minus the hazards in the game. 
+I really want to see if the control scheme is something that is too jarring for players to become acclimated to quickly. 
+Also I wanna see if I need to adjust the cooldowns for some the rate of attacks and being attacked. 
+I think I need more people to playtest because the results between people are so wide, some didn't mind the cooldowns while others did comment on it, and some immediately took to using the mouse while others didn't realize the mouse was necessary to control the direction of the player.
+
+### Activity 2 
+
+1. Yeah I think a writer could add more dialogue without touching code. The system is built around ScriptableObjects, so all the dialogue lines and reply options are basically data, not logic. As long as the programmer already set up how dialogue flows and gets displayed, the writer just has to create new DialogueNode assets, type in lines, and link them together. No scripting needed, just plugging things in through the editor.
+
+2. There isnt really a hard coded limit to how many dialogue nodes they can make. They could keep adding as many as they want. The only real limits are practical ones, like how messy it gets to manage, performance if it gets ridiculously large, or UI limits (like how many options can fit on screen at once). But system-wise, it can scale pretty far, not that I would wanna do all that. 
+
+3. Regenerate Nodes basically refreshes Unitys visual scripting system so it recognizes your scripts and turns them into usable nodes. When you add new classes or change code, Unity doesnt automatically expose that stuff to visual scripting, so this forces it to update and include everything properly. Without doing this, your custom stuff might just not show up at all.
