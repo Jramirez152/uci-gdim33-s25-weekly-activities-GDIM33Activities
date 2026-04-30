@@ -50,3 +50,19 @@ I think I need more people to playtest because the results between people are so
 2. There isnt really a hard coded limit to how many dialogue nodes they can make. They could keep adding as many as they want. The only real limits are practical ones, like how messy it gets to manage, performance if it gets ridiculously large, or UI limits (like how many options can fit on screen at once). But system-wise, it can scale pretty far, not that I would wanna do all that. 
 
 3. Regenerate Nodes basically refreshes Unitys visual scripting system so it recognizes your scripts and turns them into usable nodes. When you add new classes or change code, Unity doesnt automatically expose that stuff to visual scripting, so this forces it to update and include everything properly. Without doing this, your custom stuff might just not show up at all.
+
+## W5
+
+### Activity 1 
+
+So for milestone 1 I have already added some Navmesh stuff- enough for it to stand on its own two feet and work normally. But what I have is a very basic version of it. So now I will take this opportunity to push it further. 
+1. Step one being having added the navagent component to my enemy prefab in order for them to be able to navigate independently along walkwable surfaces
+2. The second step would be to bake the Navmesh onto the walkable surface itself- in this case it would be the arena floor I have set up. 
+3. The third step will be to update the arena itself to accomodate new flooring or add new hazards. 
+3.1 I will create a new gameobject and add a collider with a trigger on it that kills whatever touches it.
+3.2 I will ensure the game object is not walkable on the layer list. 
+3.3 Now I will have to rebake the arena so that the enemies prefabs path around any of the new hazards scattered around the arena. 
+
+### Activity 2 
+
+I designed some little floor spike traps and placed them along the floor and along some of the walls- while adding new walls within the arena to create more surface areas for traps to be placed. I added a collider so anything just dies when coming in contact with it, adding them to the walls will become a much bigger threat when I add pushing later on. The spike traps on the floor are not walkable and the Navmesh now has little holes to fit the traps along the floor and is not affected by the walls as I separated the two types of traps between floor and wall traps. 
