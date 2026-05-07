@@ -66,3 +66,26 @@ So for milestone 1 I have already added some Navmesh stuff- enough for it to sta
 ### Activity 2 
 
 I designed some little floor spike traps and placed them along the floor and along some of the walls- while adding new walls within the arena to create more surface areas for traps to be placed. I added a collider so anything just dies when coming in contact with it, adding them to the walls will become a much bigger threat when I add pushing later on. The spike traps on the floor are not walkable and the Navmesh now has little holes to fit the traps along the floor and is not affected by the walls as I separated the two types of traps between floor and wall traps. 
+
+## W6
+
+### Activity 1
+
+Goal for playtesting:
+Is the rate of which NPCs push too overwhelming? Is the player rate to push too slow? Do players prioritize attacking normally or is pushing now the preferred method of combat since you can just push enemies into traps?
+
+(no itch link for playtesting, done in unity...I know I know..)
+
+So I tried to mitigate the rate of which NPCs push by only allowing them to push when the player proximity to a trap is under a certain threshold, but in a wave format the player gets absolutely hounded by whatever little enemies are surrounding them if they just get near a trap. Dashing helps but it definitely doesn't feel like neat solution to a messy problem, more like a workaround. I need to figure out how to make it less obnoxious as the player. Only specific types of enemies being able to push might help. 
+
+Ironically the overwhelming pushing from the enemy NPCs as acted as an incentive to stay on the very edge of the hitbox with enemies so the PLAYER spamming push wasn't as common as I thought it was gonna be. 
+
+### Activity 2
+
+1. Multiply makes the color darker because it multiplies each actual RGB value together. Since RGB channels are stored between 0 and 1, multiplying two values usually makes the result smaller. For example, if one red value is 0.8 and the other is 0.5, the result is 0.4. Because the final RGB values are lower, the color appears darker and often less saturated.
+
+2. The resulting alpha value would usually be more translucent because multiplying two alpha values between 0 and 1 creates a smaller number. Since lower alpha means more transparency, the final result would generally be more see-through than either original value.
+
+3. The shader gets the UV values from the mesh itself. The model already has UV coordinates stored with its vertices, which tell the shader how a 2D texture should wrap onto the 3D object. Unitys UV0 node is just reading that first UV channel from the mesh.
+
+4. It's cool but math and I arent on speaking terms at this current moment. 
