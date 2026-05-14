@@ -89,3 +89,16 @@ Ironically the overwhelming pushing from the enemy NPCs as acted as an incentive
 3. The shader gets the UV values from the mesh itself. The model already has UV coordinates stored with its vertices, which tell the shader how a 2D texture should wrap onto the 3D object. Unitys UV0 node is just reading that first UV channel from the mesh.
 
 4. It's cool but math and I arent on speaking terms at this current moment. 
+
+
+## W7
+
+### Activity 1
+
+1. The Vertex Color node gets its data from the mesh itself. Each vertex on the Shiba mesh already stores data like position, normal, tangent, UV, and color, so the shader is just reading the color data saved on each vertex.
+2. The colors blend at the edges because the shader interpolates vertex color across the polygons. Since each corner of a polygon can have different color values, Unity smooths those values across the face instead of making a perfectly sharp edge.
+3. Vertex color is less detailed because it only stores color at the vertices, while a texture can store way more color information across the surface using pixels. Vertex color seems useful for simpler color effects, stylized models, debugging, masks, or low-poly art where you do not need super detailed texture work.
+4. Based on the Shibas colors, yes, something looks off with the meshs vertex normals. The debug shader shows strange color differences where the surface normals do not seem consistent, which suggests some normals might be flipped or incorrect.
+5. Another useful piece of data to test with a debug shader would be UV coordinates. Visualizing UVs with color could help show whether a texture will map correctly onto the mesh or if the UVs are stretched, flipped, or broken.
+6. The lighting error happens because the light direction vector and the Shibas surface normals are pointing in opposite directions. The dot product gives negative values for surfaces that should be lit, making the front look dark and the back look bright.
+7. Additive blending makes sense for the fire because fire is a glowing effect. Instead of blocking what is behind it like a solid object, additive blending adds brightness and helps the lighter parts look more intense while the darker parts fade away.
