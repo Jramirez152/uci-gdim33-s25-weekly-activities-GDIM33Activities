@@ -102,3 +102,26 @@ Ironically the overwhelming pushing from the enemy NPCs as acted as an incentive
 5. Another useful piece of data to test with a debug shader would be UV coordinates. Visualizing UVs with color could help show whether a texture will map correctly onto the mesh or if the UVs are stretched, flipped, or broken.
 6. The lighting error happens because the light direction vector and the Shibas surface normals are pointing in opposite directions. The dot product gives negative values for surfaces that should be lit, making the front look dark and the back look bright.
 7. Additive blending makes sense for the fire because fire is a glowing effect. Instead of blocking what is behind it like a solid object, additive blending adds brightness and helps the lighter parts look more intense while the darker parts fade away.
+
+
+## W8 
+
+### Activity 1 
+
+# What's New
+I tweaked a lot of the values for the abilities from milestone 2 but I haven't added any actual new content just yet. For milestone 3 I am going to do a big cosmetic overhaul to finally get out of the greybox phase. 
+# Itch Link
+https://boozie-uzi.itch.io/milestone-2-3-playtest 
+# Goals
+1. I really wanted feedback on the enemy types since that wasn't something I was actually planning to have included. 
+2. I wanted some ideas as well as to what else I could try to add. 
+3. I wanted to see if the Purple guy's push was even noticeable to the average player or if their habits would even allow the enemy to attack them with the push.
+
+# Playtesting Notes
+The repetitive clicking that people do on the game makes me feel like I should probably add some kind of like cooldown to the normal attack more than what it has already, something more substantial. But at the same time I think the movement and the rest of the pace of the game is set to a specific level that if the player can't actually attack repeatedly then they are just stuck there with their hands in their pockets until the cooldown is gone and I feel like a lot of the fun leaves with that. 
+
+### Activity 2C
+1. The pass associated with the post-processing effect is FullScreen Pass Renderer Feature. I could tell because it appears under the custom URP_PostEffect renderer in the Frame Debugger, and stepping through that pass shows the fullscreen red overlay effect being applied to the screen.
+2. When the Lerp value is set to 0, the screen shows only the original game image with no red effect applied. When the value is set to 1, the screen shows the full red cobblestone effect. When the value is set to 0.5, the screen becomes a blend of both, so the original game and the red overlay are both partially visible at the same time.
+3. Lerp blends between two inputs. In this case, input A is the original screen, and input B is the red multiplied effect. So 0 shows A, 1 shows B, and 0.5 mixes both evenly.
+4. I think because plain sin(time) gives values from -1 to 1, but Lerp expects 0 to 1. Adding 1 shifts it to 0 to 2, then dividing by 2 turns it into 0 to 1, giving a smooth pulse without the weird bright stage.
