@@ -125,3 +125,35 @@ The repetitive clicking that people do on the game makes me feel like I should p
 2. When the Lerp value is set to 0, the screen shows only the original game image with no red effect applied. When the value is set to 1, the screen shows the full red cobblestone effect. When the value is set to 0.5, the screen becomes a blend of both, so the original game and the red overlay are both partially visible at the same time.
 3. Lerp blends between two inputs. In this case, input A is the original screen, and input B is the red multiplied effect. So 0 shows A, 1 shows B, and 0.5 mixes both evenly.
 4. I think because plain sin(time) gives values from -1 to 1, but Lerp expects 0 to 1. Adding 1 shifts it to 0 to 2, then dividing by 2 turns it into 0 to 1, giving a smooth pulse without the weird bright stage.
+
+# W10
+
+## Activity 1
+
+### What's New
+Since Milestone 2, a significant amount of new content has been added to bring the project closer to the gameplay experience described in the original pitch. The player character is now represented by Jill Valentine, a fully textured and animated 3D model that was converted from XPS format through Blender and imported into Unity using a Humanoid rig. The three enemy variants standard, fast, and big have also been updated with their own zombie models and animations, completely replacing the placeholder capsules used in earlier builds.
+
+The arena itself was rebuilt as a terrain-based outdoor environment inspired by the aesthetic of Resident Evil 1. The level now includes painted terrain textures, dead trees, lamp posts with warm point lights, and a custom fog plane shader that creates a layer of atmospheric mist above the ground. Jill also has a personal spotlight attached to her, which illuminates the area immediately around the player and helps reinforce the darker atmosphere of the level.
+
+Overall, these additions bring the visual quality and content of the vertical slice much closer to the original vision for the project. The game now better reflects its intended identity as a PS1-inspired arcade brawler, with distinct enemy types, a more readable environment, and a complete three-wave gameplay loop.
+
+### Goals
+1. Is it the new camera system comfortable for players, is it noticeable
+2. Does the new overhead foliage and subtle lighting severely obscure play
+
+### Playtesting notes
+1. Smaller zombie model is harder to guage in the dark and small, it was remarked that I should have added the zombie dog instead but I might take the time to find another humanoid model that looks different for better reads at fast pace. 
+2. Tyrant now that he has more a defined model seems like he should have more health. 
+3. The waves should be clearly communicated now with remaining enemies left.
+4. MAYYYYYBE enemies should have visible health bars (?) 
+
+### Itch Link
+https://boozie-uzi.itch.io/vertical-slice-m3-playtest 
+
+## Activity 2 
+A useful strategy for planning a game is to start by identifying the core gameplay loop and then breaking the project into individual systems. Instead of thinking about the game as one large piece of software, developers can separate it into systems such as the Player, Enemy AI, UI, Camera, Audio, Environment, and Progression systems. Once these systems are identified, the next step is to map out how they interact with one another and then break each system into smaller features and tasks. This makes large projects more manageable and helps developers focus on implementing one piece at a time while still understanding how everything connects to the overall experience.
+
+Planning also affects how developers perceive a game's scope. Features that initially seem simple often require multiple interconnected systems working together behind the scenes. By breaking a game into systems and tasks before coding begins, developers gain a clearer understanding of the amount of work required and can identify dependencies, technical challenges, and unrealistic goals early in development. This process helps keep projects achievable and allows developers to prioritize core functionality before spending time on polish and additional content.
+
+## Activity 3 
+I basically worked on finding a balance of hiding traps within the forest in the form of pit falls while also thinking of ways to incentivize actually moving around the map. I think I might introduce a new enemy type in this last wave, a projectile based enemy that actually makes proper use of the dash for the player. 
